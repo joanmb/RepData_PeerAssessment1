@@ -76,7 +76,7 @@ hist(as.numeric(sum_steps_day),
      )
 ```
 
-![](PA1_template_files/figure-html/histogram steps per day-1.png)<!-- -->
+![](PA1_template_files/figure-html/histogram_steps_per_day-1.png)<!-- -->
 
 We observe that we have a considerable amount of days with few steps, in the first bin. We can suspect that this is due to we have replaced the missing values by zeros. In the third part of the assignment we'll solve this problem.
 
@@ -121,8 +121,6 @@ head(mean_steps_interval)
 ## 1.7169811 0.3396226 0.1320755 0.1509434 0.0754717 2.0943396
 ```
 
-Unlike the case of steps per day, now we have removed the NA values because in some days we have data available per interval and some days don't.  
-
 
 1- Let's make the plot:
 
@@ -135,7 +133,7 @@ plot(unique(activity$interval), mean_steps_interval,
         type="l")
 ```
 
-![](PA1_template_files/figure-html/plot daily pattern-1.png)<!-- -->
+![](PA1_template_files/figure-html/plot_daily_pattern-1.png)<!-- -->
 
 2- Now, we search for the interval that contains the maximum number of steps on average.
 
@@ -238,7 +236,7 @@ hist(as.numeric(sum_steps_day_filled),
      )
 ```
 
-![](PA1_template_files/figure-html/histogram steps per day filled-1.png)<!-- -->
+![](PA1_template_files/figure-html/histogram_steps_per_day_filled-1.png)<!-- -->
 
 And now, we calculate the mean and median of the total number of steps taken per day.
 
@@ -337,7 +335,7 @@ xyplot(steps~interval|weekday,
        ylab="Average of steps take")
 ```
 
-![](PA1_template_files/figure-html/plot weekday-1.png)<!-- -->
+![](PA1_template_files/figure-html/plot_weekday-1.png)<!-- -->
 
 
 

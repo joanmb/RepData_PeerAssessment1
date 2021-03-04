@@ -421,7 +421,6 @@ md</code></pre>
 head(mean_steps_interval)</code></pre>
 <pre><code>##         0         5        10        15        20        25 
 ## 1.7169811 0.3396226 0.1320755 0.1509434 0.0754717 2.0943396</code></pre>
-<p>Unlike the case of steps per day, now we have removed the NA values because in some days we have data available per interval and some days don’t.</p>
 <p>1- Let’s make the plot:</p>
 <pre class="r"><code>plot(unique(activity$interval), mean_steps_interval,
         main=&quot;Average daily activity pattern&quot;,

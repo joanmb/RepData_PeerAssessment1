@@ -55,7 +55,7 @@ head(sum_steps_day)
 
 
 2. Now we plot the histogram of the total number of steps taken each day
-```{r histogram steps per day}
+```{r histogram_steps_per_day}
 par(mfrow=c(1,1))
 hist(as.numeric(sum_steps_day),
         main="Total number of steps taken each day",
@@ -93,11 +93,9 @@ mean_steps_interval<-tapply(activity$steps, activity$interval, mean, na.rm=TRUE)
 head(mean_steps_interval)
 ```
 
-Unlike the case of steps per day, now we have removed the NA values because in some days we have data available per interval and some days don't.  
-
 
 1- Let's make the plot:
-```{r plot daily pattern}
+```{r plot_daily_pattern}
 plot(unique(activity$interval), mean_steps_interval,
         main="Average daily activity pattern",
         xlab="5-minute interval time of the day",
@@ -108,7 +106,7 @@ plot(unique(activity$interval), mean_steps_interval,
 
 2- Now, we search for the interval that contains the maximum number of steps on average.
 
-```{r max interval}
+```{r max_interval}
 interval<-which(mean_steps_interval==max(mean_steps_interval))
 interval
 ``` 
@@ -155,7 +153,7 @@ for (j in 1:nrow(activity)){
 ```
 
 4- Let's make a histogram of the total number of steps taken each day
-```{r histogram steps per day filled}
+```{r histogram_steps_per_day_filled}
 sum_steps_day_filled<-tapply(activity_filled$steps,
                              activity_filled$date,
                              sum)
@@ -216,7 +214,7 @@ for (j in 1:nrow(activity_filled)){
 
 2- Panel plot containing a time series plot of the 5-minute interval (x-axis) and the average number of steps taken, averaged across all weekday days or weekend days (y-axis).
 
-```{r plot weekday}
+```{r plot_weekday}
 library(lattice)
 activity_weekday<-aggregate(steps~interval+weekday,
                             data=activity_filled, 
