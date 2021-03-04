@@ -4,9 +4,9 @@ output:
     keep_md: yes
 ---
 # Reproducible Research: Peer Assessment 1
-  **Joan Mariné Boada**
+  **_Joan Mariné Boada_**
    
-  **4th March 2021**
+  **_4th March 2021_**
 
 ## Introduction
 
