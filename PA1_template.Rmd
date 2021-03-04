@@ -1,9 +1,12 @@
 ---
-title: "Reproducible Research: Peer Assessment 1"
-author: "Joan Mariné Boada"
-date: "3rd March 2021"
-keep_md: true
+output: 
+  html_document: 
+    keep_md: yes
 ---
+# Reproducible Research: Peer Assessment 1
+  **Joan Mariné Boada**
+   
+  **4th March 2021**
 
 ## Introduction
 
@@ -27,18 +30,6 @@ The dataset is stored in a comma-separated-value (CSV) file and there are a tota
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
 ## Loading and preprocessing the data
 
 We unzip the file and transform the data into a format suitable for our analysis.
@@ -49,6 +40,9 @@ activity<-read.csv("./activity.csv")
 activity$date<-as.Date(activity$date)
 activity$steps<-as.numeric(activity$steps)
 ```
+
+
+
 
 ## What is mean total number of steps taken per day?  
 
@@ -90,12 +84,6 @@ Hence we have that the mean is `r format(mn, scientific=FALSE)` and the median `
 
 
 
-
-
-
-
-
-
 ## What is the average daily activity pattern?
 
 We gonna calculate the mean of steps per day:
@@ -133,22 +121,6 @@ max(mean_steps_interval)
 ```
 
 These computations are coherent with the plot we have draw.
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -223,23 +195,6 @@ Finally, the relative error:
 (mn_filled-mn)/mn_filled
 (md_filled-md)/md_filled
 ```
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
